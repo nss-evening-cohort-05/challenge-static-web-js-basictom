@@ -1,10 +1,8 @@
-// var userInput = document.getElementByID("");
-// var myVarOne = 3;
 var userHeight = document.getElementById("height");
 var userChar = document.getElementById("char");
 var button = document.getElementById("btn");
 
-button.addEventListener("click", getValues);
+
 
 function getValues(){
   var char = userChar.value;
@@ -13,10 +11,10 @@ function getValues(){
     height: height,
     char: char
   }
+  treeMaker(myTree);
   if (char === "" || height === ""){
     alert("Add values please");
   }
-  treeMaker(myTree);
 }
 
 function treeMaker(tree){
@@ -27,10 +25,13 @@ function treeMaker(tree){
   }
 }
 
-// function enterkeyPress(keypress){
-//   if (keypress.which === 13){
-//     treeMaker();
-//   }
-// }
-//
-// document.addEventListener("keypress", enterKeyPress);
+document.addEventListener("keypress", enterKeyPress);
+
+function enterKeyPress(keypress) {
+	if (keypress.which === 13) {
+    console.log("ioeroj");
+		treeMaker();
+	}
+}
+
+button.addEventListener("click", getValues);

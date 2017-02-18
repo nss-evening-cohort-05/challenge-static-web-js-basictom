@@ -3,14 +3,13 @@ var userChar = document.getElementById("char");
 var button = document.getElementById("btn");
 
 
-
 function getValues(){
   var char = userChar.value;
   var height = userHeight.value;
   var myTree = {
     height: height,
     char: char
-  }
+  };
   treeMaker(myTree);
   if (char === "" || height === ""){
     alert("Add values please");
@@ -25,13 +24,12 @@ function treeMaker(tree){
   }
 }
 
-document.addEventListener("keypress", enterKeyPress);
-
 function enterKeyPress(keypress) {
 	if (keypress.which === 13) {
-    console.log("ioeroj");
-		treeMaker();
+    console.log("testing to see if keypress is working.");
+		getValues();
 	}
 }
 
 button.addEventListener("click", getValues);
+document.addEventListener("keypress", enterKeyPress);

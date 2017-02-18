@@ -26,7 +26,6 @@ function treeMaker(tree){
 
 function enterKeyPress(keypress) {
 	if (keypress.which === 13) {
-    console.log("testing to see if keypress is working.");
 		getValues();
 	}
 }
